@@ -20,16 +20,26 @@ const typeNames = {
 // ===== 渲染博客 =====
 function renderBlogs() {
     const grid = document.getElementById('blogGrid');
-    grid.innerHTML = blogPosts.map(post => `
-        <article class="blog-card">
-            <div class="blog-date">${post.date}</div>
-            <h3 class="blog-title">${post.title}</h3>
-            <p class="blog-excerpt">${post.excerpt}</p>
-            <div class="blog-tags">
-                ${post.tags.map(tag => `<span class="blog-tag">${tag}</span>`).join('')}
-            </div>
-        </article>
-    `).join('');
+    grid.innerHTML = blogPosts.map(post => {
+        // 判断是否有外链，第一篇有，后两篇没
+        const link = post.link && post.link.startsWith('http') ? post.link : '';
+        // 如果有链接，整张卡片包上 <a> 标签新窗口打开；没链接就原样显示
+        const openTag = link ? `<a href="${link}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block;">` : '<div>';
+        const closeTag = link ? '</a>' : '</div>';
+        
+        return `
+            ${openTag}
+                <article class="blog-card">
+                    <div class="blog-date">${post.date}</div>
+                    <h3 class="blog-title">${post.title}</h3>
+                    <p class="blog-excerpt">${post.excerpt}</p>
+                    <div class="blog-tags">
+                        ${post.tags.map(tag => `<span class="blog-tag">${tag}</span>`).join('')}
+                    </div>
+                </article>
+            ${closeTag}
+        `;
+    }).join('');
 
     // 更新统计数字
     document.getElementById('blogCount').textContent = blogPosts.length;

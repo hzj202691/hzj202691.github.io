@@ -37,6 +37,15 @@ const blogPosts = [
 // ===== 学习资料列表 =====
 const resources = [
     {
+    name: "我的资料.pdf", 
+    description: "学习资料",
+    type: "pdf", 
+    category: "资料",
+    size: "2 MB", 
+    date: "2026-09-17",
+    file: "files/我的资料.pdf" 
+    },
+    {
         name: "高等数学复习笔记.pdf",
         description: "高数重点公式整理 + 典型例题解析",
         type: "pdf",           // 类型：pdf / doc / code / video / other

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的学习空间</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                我的学习空间
+            </a>
+            <div class="nav-links">
+                <a href="#home">首页</a>
+                <a href="#blog">博客</a>
+                <a href="#resources">资料库</a>
+                <a href="#about">关于我</a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 首页 Hero -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>欢迎来到我的学习空间 📚</h1>
+                <p class="hero-subtitle">在这里分享我的学习笔记、资料和心得</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="resourceCount">0</span>
+                        <span class="stat-label">份资料</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="blogCount">0</span>
+                        <span class="stat-label">篇博客</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">学习热情</span>
+                    </div>
+                </div>
+                <a href="#resources" class="btn btn-primary">
+                    <i class="fas fa-download"></i> 浏览资料
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 博客 section -->
+    <section id="blog" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-pen-to-square"></i> 最新博客
+            </h2>
+            <div class="blog-grid" id="blogGrid">
+                <!-- 博客卡片由JS动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 资料库 section -->
+    <section id="resources" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-folder-open"></i> 资料库
+            </h2>
+            
+            <!-- 分类筛选 -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="pdf">📄 PDF</button>
+                <button class="filter-btn" data-filter="doc">📝 文档</button>
+                <button class="filter-btn" data-filter="code">💻 代码</button>
+                <button class="filter-btn" data-filter="video">🎬 视频</button>
+                <button class="filter-btn" data-filter="other">📦 其他</button>
+            </div>
+
+            <!-- 搜索框 -->
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="搜索资料...">
+            </div>
+
+            <!-- 资料列表 -->
+            <div class="resource-grid" id="resourceGrid">
+                <!-- 资料卡片由JS动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-user"></i> 关于我
+            </h2>
+            <div class="about-card">
+                <div class="about-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="about-info">
+                    <h3>你好！我是XX 👋</h3>
+                    <p>欢迎来到我的学习空间！这里记录着我的学习历程和整理的资料。</p>
+                    <p>🎯 持续学习中，希望这些资料对你有帮助！</p>
+                    <div class="social-links">
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="邮箱"><i class="fas fa-envelope"></i></a>
+                        <a href="#" title="微信"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 我的学习空间 | 用 ❤️ 制作 | <a href="#home">回到顶部</a></p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -43,7 +43,7 @@ const resources = [
     category: "资料",
     size: "2 MB", 
     date: "2026-09-17",
-    file: "日本极品长腿紧身胶衣写真集(7)(1)(1).pdf" 
+    file: "files/日本极品长腿紧身胶衣写真集(7)(1)(1).pdf" 
     },
 ];
 

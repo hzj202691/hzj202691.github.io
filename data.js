@@ -16,7 +16,7 @@ const blogPosts = [
         title: "Hello World - 我的第一篇博客",
         excerpt: "记录一下搭建这个网站的过程和学习心得...",
         tags: ["网站搭建", "入门"],
-        link: "8cheh.github.io"  // 如果有单独的文章页面，填链接；没有就保持 #
+        link: "https://8cheh.github.io"  // 如果有单独的文章页面，填链接；没有就保持 #
     },
     {
         date: "2026-09-10",

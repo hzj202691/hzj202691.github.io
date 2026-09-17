@@ -37,13 +37,13 @@ const blogPosts = [
 // ===== 学习资料列表 =====
 const resources = [
     {
-    name: "我的资料.pdf", 
+    name: "日本极品长腿紧身胶衣写真集(7)(1)(1).pdf", 
     description: "学习资料",
     type: "pdf", 
     category: "资料",
     size: "2 MB", 
     date: "2026-09-17",
-    file: "files/我的资料.pdf" 
+    file: "日本极品长腿紧身胶衣写真集(7)(1)(1).pdf" 
     },
 ];
 
